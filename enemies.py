@@ -18,6 +18,3 @@ class Enemies(Turtle):
     def move(self):
         new_x = self.xcor() - random.randint(4, 20)
         self.goto(new_x, self.ycor())
-
-    def appear(self):
-        self.goto(300, random.randint(-250, 250))
