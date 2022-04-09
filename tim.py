@@ -3,6 +3,7 @@ import random
 START_POSITION = (0, -280)
 
 class Tim(Turtle):
+
     def __init__(self):
         super(Tim, self).__init__()
         self.shape("turtle")

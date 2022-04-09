@@ -28,8 +28,7 @@ while game_on:
         enemies_list.append(enemies)
 
     for enemie in enemies_list:
-        random_walk = random.randint(4, 20)
-        enemie.move(random_walk)
+        enemie.move()
         if enemie.xcor() <= -330:
             enemies_list.remove(enemie)
 
@@ -48,5 +47,6 @@ while game_on:
         else:
             difficulty.append(random.randint(1,2))
         tim.start()
+        msg.display_level()
 
 screen.exitonclick()

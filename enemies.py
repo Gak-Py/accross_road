@@ -1,6 +1,7 @@
 from turtle import Turtle
 import random
 
+
 class Enemies(Turtle):
     def __init__(self):
         super(Enemies, self).__init__()
@@ -14,8 +15,8 @@ class Enemies(Turtle):
         self.setheading(180)
         self.goto(300, random_y)
 
-    def move(self, num):
-        new_x = self.xcor() - num
+    def move(self):
+        new_x = self.xcor() - random.randint(4, 20)
         self.goto(new_x, self.ycor())
 
     def appear(self):
