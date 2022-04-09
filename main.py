@@ -22,7 +22,8 @@ difficulty = [0,1,0]
 
 game_on = True
 while game_on:
-    print(len(enemies_list))
+    screen.update()
+    time.sleep(0.1)
     for i in range(random.choice(difficulty)):
         enemies = Enemies()
         enemies_list.append(enemies)
@@ -36,8 +37,6 @@ while game_on:
             msg.game_over()
             game_on = False
 
-    time.sleep(0.1)
-    screen.update()
     if tim.ycor() >= 300:
         msg.goal()
         for enemie in enemies_list:
