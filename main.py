@@ -1,4 +1,4 @@
-from turtle import Turtle, Screen
+from turtle import Screen
 from tim import Tim
 from msg import Msg
 from enemies import Enemies

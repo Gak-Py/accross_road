@@ -10,9 +10,10 @@ class Msg(Turtle):
         self.level_num = 1
         self.display_level()
 
-    def game_over(self):
-        self.goto(0, 0)
-        self.write("Game Over.", font=("Futura", 20, "bold"), align="center")
+    def display_level(self):
+        self.clear()
+        self.goto(-280, 260)
+        self.write(f"Level {self.level_num}", font=("Futura", 20, "bold"), align="left")
 
     def goal(self):
         self.goto(0, 0)
@@ -25,7 +26,6 @@ class Msg(Turtle):
         time.sleep(2)
         self.clear()
 
-    def display_level(self):
-        self.clear()
-        self.goto(-280, 260)
-        self.write(f"Level {self.level_num}", font=("Futura", 20, "bold"), align="left")
+    def game_over(self):
+        self.goto(0, 0)
+        self.write("Game Over.", font=("Futura", 20, "bold"), align="center")
